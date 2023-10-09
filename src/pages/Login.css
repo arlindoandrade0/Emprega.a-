@@ -1,0 +1,20 @@
+
+h1{
+  color: antiquewhite;
+
+}
+label {
+    display: inline-block;
+    margin-bottom: 9px;
+   
+  }
+  
+  input {
+    border: 2px solid #5d15bb;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    margin-right: 150px;
+  }
+

@@ -1,0 +1,22 @@
+.figurinha_trabalho {
+    width: 50%;
+    height: 60%;
+    float: left
+   }
+
+
+.medico{
+     width: 35%;
+    height: 60%;
+    float: right;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+  .home{
+   display: block;
+  }
+
+  .titulo,.paragrafo{
+    color: antiquewhite;
+  }
