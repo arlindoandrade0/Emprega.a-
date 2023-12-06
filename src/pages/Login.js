@@ -1,19 +1,48 @@
 import './Login.css'
-function Login(){
+import React, { useState } from 'react';
+
+
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
     
-    return(
+    if (username === 'usuario' && password === 'senha') {
+      setLoggedIn(true);
+    } else {
+      alert('Credenciais inválidas. Tente novamente.');
+    }
+  };
+
+  return (
+    <div className="container2">
+      {!loggedIn ? (
         <div className="login-container">
-        <div className="login-header">
-          <h1 className='h1'>Login</h1>
+          <h2>Login</h2>
+          <input
+            type="text"
+            placeholder="Usuário"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={handleLogin}>Entrar</button>
         </div>
-        <form>
-          <input type="text" className="login-input" placeholder="Nome de usuário" />
-          <input type="password" className="login-input" placeholder="Senha" />
-          <button type="submit" className="login-button">Entrar</button>
-        </form>
-      
-      </div>
-    )
-    
-}
-export default Login
+      ) : (
+        <div>
+          <h2>Bem-vindo, {username}!</h2>
+         
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Login;

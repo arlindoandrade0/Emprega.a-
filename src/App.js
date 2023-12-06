@@ -6,9 +6,13 @@ import Cadastro from './pages/Cadastro';
 import Container from './componente/layout/Container';
 import Footer from './componente/layout/Footer';
 import Login from './pages/Login';
+import PerfilUsuario from './pages/PerfilUsuario';
 import './App.css'
 
+
+
 function App() {
+
   return (
     <Router>
 
@@ -23,6 +27,8 @@ function App() {
           <Route path="/cadastro" element={<Cadastro />} />
 
           <Route path="/login" element={<Login />} />
+
+          <Route path="/PerfilUsuario" element={<PerfilUsuario />} />
         </Routes>
       </Container>
       <Footer />
